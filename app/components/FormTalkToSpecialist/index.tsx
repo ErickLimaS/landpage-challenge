@@ -12,8 +12,6 @@ function TalkToSpecialistForm() {
     const [company, setCompany] = useState<string>("")
     const [telephone, setTelephone] = useState<string>("")
 
-    // MAKE BTN CHANGE COLOR WHEN FIELDS ARE FILLED
-
     // SUBMIT FORM - not async, while its just a example
     function submitForm(e: React.FormEvent<HTMLFormElement>) {
 
@@ -37,16 +35,23 @@ function TalkToSpecialistForm() {
         // Transforms raw input value into the brazilian number format: (XX) XXXXX-XXXX
         const formatedTelphoneNumber = telephone.replace(telphoneRegex, "($1) $2$3-$4")
 
-        setLoading(false)
+        // Simulates Server Loading
+        setTimeout(() => {
 
-        alert(
-            `
-            Nome: ${name}
-            Email ${email}
-            Empresa: ${company}
-            Telefone: ${formatedTelphoneNumber}
-            `
-        )
+            setLoading(false)
+
+            alert(
+                `
+                Server Loading Simulation!
+                Data Received by Server Bellow:
+
+                Nome: ${name}
+                Email ${email}
+                Empresa: ${company}
+                Telefone: ${formatedTelphoneNumber}
+            `)
+
+        }, 1000)
 
     }
 
@@ -122,11 +127,11 @@ function TalkToSpecialistForm() {
             </div>
 
             <button
-                className={`p-3 rounded-lg text-center text-xl font-bold text-white ${formFilled ? "bg-primary" : "bg-[#98bdf9]"} hover:bg-primary transition-colors`}
+                className={`p-3 rounded-lg text-center text-xl font-bold text-white ${formFilled ? "bg-primary" : "bg-[#98bdf9]"} hover:bg-primary transition-all`}
                 type='submit'
                 disabled={loading}
             >
-                FALE COM UM ESPECIALISTA
+                {loading ? "ENVIANDO..." : "FALE COM UM ESPECIALISTA"}
             </button>
 
         </form>
