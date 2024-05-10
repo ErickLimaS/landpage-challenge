@@ -8,15 +8,17 @@ export default function Home() {
     <main>
 
       {/* HERO */}
-      <section className="pt-16 pb-16 bg-gradient-to-b from-primary to-dark-purple  flex items-center justify-center">
+      <section className="flex items-center justify-center py-16 bg-gradient-to-b from-primary to-dark-purple">
 
-        <div className="sm:ml-4 sm:mr-4 flex flex-col md:flex-row gap-10 xl:gap-32 items-center md:max-w-7xl">
+        <div className="container flex flex-col items-center sm:max-lg:mx-4 md:flex-row gap-10 md:max-xl:gap-6 xl:gap-32">
 
-          <div className="p-2 md:p-0 flex flex-col sm:max-md:gap-16 gap-8 md:gap-12 text-white font-bold">
+          <div className="flex flex-col max-sm:gap-24 sm:max-md:gap-16 md:gap-12 p-2 max-sm:p-1 md:p-0 text-white font-bold">
 
-            <h1 className="text-4xl text-center md:text-start">Desenvolvimento e gestão de serviços tecnológicos!</h1>
+            <h1 className="text-4xl text-center md:text-start max-md:mt-12">
+              Desenvolvimento e gestão de serviços tecnológicos!
+            </h1>
 
-            <ul className="text-lg flex flex-col gap-1">
+            <ul className="flex flex-col gap-1 text-lg">
 
               <li className="flex gap-2 items-center sm:hover:scale-105 xl:hover:scale-110 transition-all">
                 <SvgArrowRight fill={"#49dd80"} /> Gestão técnica de Programas Setoriais da Qualidade
@@ -36,10 +38,10 @@ export default function Home() {
 
           <div
             id="form"
-            className="m-2 sm:max-md:mr-4 sm:max-md:ml-4 pt-8 pb-8 pl-4 pr-4 sm:pl-12 md:max-lg:pl-4 sm:pr-12 md:max-lg:pr-4 rounded-xl bg-white text-primary flex flex-col gap-12"
+            className="flex flex-col gap-12 m-2 sm:max-md:mx-4 py-8 px-4 sm:px-12 md:max-lg:px-4 rounded-xl bg-white text-primary"
           >
 
-            <h2 className="text-2xl font-bold ">Informe seus dados para falar com um especialista:</h2>
+            <h2 className="text-2xl font-bold">Informe seus dados para falar com um especialista:</h2>
 
             <TalkToSpecialistForm />
 
