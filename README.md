@@ -2,6 +2,6 @@
 - [x] Deve ser desenvolvido utilizando Next.js
 - [x] Para o estilo utilizar Tailwind CSS
 - [ ] A página deve ser responsiva
-- [ ] (form): Todos os campos são obrigatórios 
-- [ ] (form): O campo e-mail deve aceitar apenas e-mails válidos
-- [ ] (form): O campo telefone deve aceitar o seguinte padrão (XX) XXXXX-XXXX
+- [x] (form): Todos os campos são obrigatórios 
+- [x] (form): O campo e-mail deve aceitar apenas e-mails válidos
+- [x] (form): O campo telefone deve aceitar o seguinte padrão (XX) XXXXX-XXXX
