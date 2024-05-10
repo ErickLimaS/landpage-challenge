@@ -2,6 +2,16 @@ import Link from "next/link";
 import TalkToSpecialistForm from "./components/FormTalkToSpecialist";
 import SvgArrowRight from "@/public/assets/svg/arrow-right.svg"
 
+export async function generateMetadata() {
+
+  return {
+    title: "TESIS | Início",
+    description: `Seja bem-vindo à TESIS, onde a engenharia e a inovação tecnológica se unem em prol de uma visão holística dos negócios.
+     Nossa missão é ir além, incorporando expertise técnica à compreensão abrangente das necessidades empresariais.`,
+  }
+
+}
+
 export default function Home() {
   return (
 
