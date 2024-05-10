@@ -19,8 +19,8 @@ function TalkToSpecialistForm() {
 
         e.preventDefault()
 
-        // Needs exactly 11 numbers on input
-        if (telephone.length != 11) {
+        // Validate numbers on input with more than 13 chars
+        if (telephone.length < 13) {
 
             alert("Número não está completo! Tente Novamente.")
 
@@ -73,13 +73,13 @@ function TalkToSpecialistForm() {
             onSubmit={(e) => submitForm(e)}
         >
 
-            <div className='flex flex-col gap-4 text-xl font-medium'>
+            <div className='md:min-w-[400px] xl:min-w-[440px] flex flex-col gap-4 text-xl font-medium'>
 
-                <label className='flex flex-col md:flex-row gap-2 md:gap-4 justify-between md:items-center'>
+                <label className='flex flex-col md:flex-row gap-2 md:gap-4 justify-between md:items-center font-semibold'>
                     Nome:
                     <input
                         onChange={(e) => setName(e.target.value)}
-                        className='border-solid border-2 rounded-lg bg-blue-50 p-2 text-lg text-black/90'
+                        className='lg:min-w-[300px] border-solid border-2 border-slate-200 rounded-lg bg-[#f4f8fd] p-2 text-lg text-black/90'
                         name="name"
                         type="text"
                         title="Seu Nome."
@@ -87,11 +87,11 @@ function TalkToSpecialistForm() {
                     ></input>
                 </label>
 
-                <label className='flex flex-col md:flex-row gap-2 md:gap-4 justify-between md:items-center'>
+                <label className='flex flex-col md:flex-row gap-2 md:gap-4 justify-between md:items-center font-semibold'>
                     E-mail:
                     <input
                         onChange={(e) => setEmail(e.target.value)}
-                        className='border-solid border-2 rounded-lg bg-blue-50 p-2 text-lg text-black/90'
+                        className='lg:min-w-[300px] border-solid border-2 border-slate-200 rounded-lg bg-[#f4f8fd] p-2 text-lg text-black/90'
                         name="email"
                         type="email"
                         title="Seu email."
@@ -99,11 +99,11 @@ function TalkToSpecialistForm() {
                     ></input>
                 </label>
 
-                <label className='flex flex-col md:flex-row gap-2 md:gap-4 justify-between md:items-center'>
+                <label className='flex flex-col md:flex-row gap-2 md:gap-4 justify-between md:items-center font-semibold'>
                     Empresa:
                     <input
                         onChange={(e) => setCompany(e.target.value)}
-                        className='border-solid border-2 rounded-lg bg-blue-50 p-2 text-lg text-black/90'
+                        className='lg:min-w-[300px] border-solid border-2 border-slate-200 rounded-lg bg-[#f4f8fd] p-2 text-lg text-black/90'
                         name="company"
                         type="text"
                         title="Nome da Empresa."
@@ -111,15 +111,15 @@ function TalkToSpecialistForm() {
                     ></input>
                 </label>
 
-                <label className='flex flex-col md:flex-row gap-2 md:gap-4 justify-between md:items-center'>
+                <label className='flex flex-col md:flex-row gap-2 md:gap-4 justify-between md:items-center font-semibold'>
                     Telefone:
                     <input
                         onChange={(e) => setTelephone(e.target.value)}
-                        className='border-solid border-2 rounded-lg bg-blue-50 p-2 text-lg text-black/90'
+                        className='lg:min-w-[300px] border-solid border-2 border-slate-200 rounded-lg bg-[#f4f8fd] p-2 text-lg text-black/90'
                         name="tel"
                         type="tel"
-                        pattern="^[0-9]+$"
-                        title="Apenas Números, incluindo o DDD."
+                        pattern="(\([0-9]{2}\))\s?([0-9]{4,5})-([0-9]{4})"
+                        title="Verifique o DDD e outros números, seguindo esse formato: (XX) XXXXX-XXXX."
                         required
                     ></input>
                 </label>
