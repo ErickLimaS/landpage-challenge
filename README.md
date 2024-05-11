@@ -10,7 +10,7 @@
 
 ## Considerações
 
-- ``Testes de Componentes`` adicionado
+- ``Testes de Componentes`` feitos com <a href="https://jestjs.io/pt-BR/" target="_blank" rel="no-referrer" >Jest</a>
 - Foi utilizado <a href="https://react-svgr.com/" target="_blank" rel="no-referrer" >SVGR</a> para o uso de SVGs.
 
 ## Como Rodar Localmente 
