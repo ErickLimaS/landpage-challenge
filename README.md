@@ -20,8 +20,8 @@ Imagem disponível no <a href="https://hub.docker.com/repository/docker/ericklim
 Use os seguintes comandos:
 
 ```javascript
-docker pull ericklimas/tesis-erick-desafio
-docker run -p 3000:3000 ericklimas/tesis-erick-desafio
+docker pull ericklimas/tesis-erick-desafio:1.0
+docker run -p 3000:3000 ericklimas/tesis-erick-desafio:1.0
 ```
 O site estará disponível como <a href="https://localhost:3000" target="_blank" rel="no-referrer" >localhost:3000</a>.
 
