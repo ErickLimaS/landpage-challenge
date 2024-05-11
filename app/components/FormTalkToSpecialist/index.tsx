@@ -1,7 +1,7 @@
 "use client"
 import React, { useEffect, useState } from 'react'
 
-function TalkToSpecialistForm() {
+function TalkToSpecialistForm({ onSubmit }: { onSubmit?: jest.Mock }) {
 
     const [loading, setLoading] = useState<boolean>(false)
 
@@ -70,7 +70,7 @@ function TalkToSpecialistForm() {
     return (
         <form
             className='flex flex-col gap-14 max-w-full'
-            onSubmit={(e) => submitForm(e)}
+            onSubmit={onSubmit || submitForm}
         >
 
             <div className='md:min-w-[400px] xl:min-w-[440px] flex flex-col gap-4 text-xl font-medium'>
