@@ -8,6 +8,11 @@
 - [x] (form): O campo e-mail deve aceitar apenas e-mails válidos
 - [x] (form): O campo telefone deve aceitar o seguinte padrão (XX) XXXXX-XXXX
 
+## Considerações
+
+- ``Testes de Componentes`` adicionado
+- Foi utilizado <a href="https://react-svgr.com/" target="_blank" rel="no-referrer" >SVGR</a> para o uso de SVGs.
+
 ## Como Rodar Localmente 
 
 1. Faça o ``Fork`` ou ``Clone`` esse repositório:
@@ -26,7 +31,3 @@ npm run dev
 ```
 
 4. Pronto! Acesse http://localhost:3000/ para ver o site funcionando!
-
-## Considerações
-
-- Foi utilizado <a href="https://react-svgr.com/" target="_blank" rel="no-referrer" >SVGR</a> para o uso de SVGs.
