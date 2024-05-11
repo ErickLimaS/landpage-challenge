@@ -13,6 +13,20 @@
 - ``Testes de Componentes`` feitos com <a href="https://jestjs.io/pt-BR/" target="_blank" rel="no-referrer" >Jest</a>
 - Foi utilizado <a href="https://react-svgr.com/" target="_blank" rel="no-referrer" >SVGR</a> para o uso de SVGs.
 
+## Como Rodar com Docker
+
+Imagem disponível no <a href="https://hub.docker.com/repository/docker/ericklimas/tesis-erick-desafio/general" target="_blank" rel="no-referrer" >Docker Hub</a>.
+
+Use os seguintes comandos:
+
+```javascript
+docker pull ericklimas/tesis-erick-desafio
+docker run -p 3000:3000 ericklimas/tesis-erick-desafio
+```
+O site estará disponível como <a href="https://localhost:3000" target="_blank" rel="no-referrer" >localhost:3000</a>.
+
+Caso queira trocar a porta, troque ``-p 3000:3000`` para ``-p [nova-porta]:3000``.
+
 ## Como Rodar Localmente 
 
 1. Faça o ``Fork`` ou ``Clone`` esse repositório:
