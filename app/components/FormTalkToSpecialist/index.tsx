@@ -20,7 +20,7 @@ function TalkToSpecialistForm({ onSubmit }: { onSubmit?: jest.Mock }) {
         e.preventDefault()
 
         // Validate numbers on input with more than 13 chars
-        if (telephone.length < 13) {
+        if (telephone.length < 11) {
 
             alert("Número não está completo! Tente Novamente.")
 
@@ -33,7 +33,7 @@ function TalkToSpecialistForm({ onSubmit }: { onSubmit?: jest.Mock }) {
         const telphoneRegex = RegExp(/(\d{2})(\d{1})(\d{4})(\d{4})/)
 
         // Transforms raw input value into the brazilian number format: (XX) XXXXX-XXXX
-        const formatedTelphoneNumber = telephone.replace(telphoneRegex, "($1) $2$3-$4")
+        const formatedTelphoneNumber = telephone.replace(/-/g, "").replace(/[^\w-]\-?/g, "").replace(telphoneRegex, "($1) $2$3-$4")
 
         // Simulates Server Loading
         setTimeout(() => {
@@ -118,7 +118,7 @@ function TalkToSpecialistForm({ onSubmit }: { onSubmit?: jest.Mock }) {
                         className='lg:min-w-[300px] border-solid border-2 border-slate-200 rounded-lg bg-[#f4f8fd] p-2 text-lg text-black/90'
                         name="tel"
                         type="tel"
-                        pattern="(\([0-9]{2}\))\s?([0-9]{4,5})-([0-9]{4})"
+                        pattern="\(?\d{2}\)?\s?([0-9]{4,5})-?([0-9]{4})"
                         title="Verifique o DDD e outros números, seguindo esse formato: (XX) XXXXX-XXXX."
                         required
                     ></input>
