@@ -31,7 +31,7 @@ Caso queira trocar a porta, troque ``-p 3000:3000`` para ``-p [nova-porta]:3000`
 
 1. Faça o ``Fork`` ou ``Clone`` esse repositório:
 ```javascript
-gh repo clone ErickLimaS/tesis-desafio
+gh repo clone ErickLimaS/landpage-challenge
 ```
 
 2. Dentro da pasta raiz, ``instale as dependências`` usadas no projeto através desse comando:
